@@ -82,7 +82,7 @@ public class TestNGTestResultBuildAction extends AbstractTestResultAction implem
         if (passCount != savedPassCount || failCount != savedFailCount || skipCount != savedSkipCount) {
             LOGGER.log(Level.FINE, "saving {0}", owner);
             try {
-                owner.save();
+                run.save();
             } catch (IOException x) {
                 LOGGER.log(Level.WARNING, "failed to save " + owner, x);
             }
